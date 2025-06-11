@@ -8,7 +8,7 @@ import (
 	"golang.org/x/exp/mmap"
 )
 
-func main() {
+func mmap_write_read_example() {
 	const fileName = "example.dat"
 	const size = 4096
 

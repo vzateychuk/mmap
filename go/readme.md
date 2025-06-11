@@ -18,7 +18,23 @@ The OS handles lazy loading (only loading parts when accessed) and flushing chan
 
 ## Examples:
 
+### mmap_read_example
+
+This example writes "Hello from mmap!" to file example.dat and reads it back via mapped memory.
+
 ```bash
-go run mmap_write_example.go
+go run mmap_read_example.go
 ```
-This writes "Hello from mmap!" directly to example.dat via mapped memory and reads it back.
+
+### mmap_channel_example (write/read)
+
+This example created a simple shared memory channel using mmap for IPC in Go:
+
+** mmap_channel_write_process.go **- writes messages to a shared memory file.
+** mmap_channel_read_process.go ** - polls the memory for new messages.
+
+Run in two terminals:
+```bash
+go run mmap_channel_write_process.go
+go run mmap_channel_read_process.go
+```
