@@ -1,0 +1,10 @@
+// Schema file for FlatBuffers
+namespace ru.vez.kvstore;
+
+table PaymentRecord {
+  sender: string;
+  receiver: string;
+  amount: long;
+}
+
+root_type PaymentRecord;
